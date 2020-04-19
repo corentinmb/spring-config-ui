@@ -1,0 +1,1442 @@
+{
+    "configprops": {
+        "contexts": {
+            "application-1": {
+                "beans": {
+                    "spring.jpa-org.springframework.boot.autoconfigure.orm.jpa.JpaProperties": {
+                        "prefix": "spring.jpa",
+                        "properties": {
+                            "mappingResources": [],
+                            "showSql": false,
+                            "hibernate": {
+                                "ddlAuto": "none",
+                                "naming": {}
+                            },
+                            "generateDdl": false,
+                            "properties": {
+                                "hibernate.default_schema": "OWN_AP22447_STK"
+                            },
+                            "databasePlatform": "org.hibernate.dialect.Oracle12cDialect"
+                        }
+                    },
+                    "management.trace.http-org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceProperties": {
+                        "prefix": "management.trace.http",
+                        "properties": {
+                            "include": [
+                                "COOKIE_HEADERS",
+                                "RESPONSE_HEADERS",
+                                "REQUEST_HEADERS",
+                                "TIME_TAKEN"
+                            ]
+                        }
+                    },
+                    "inetUtilsProperties": {
+                        "prefix": "spring.cloud.inetutils",
+                        "properties": {
+                            "ignoredInterfaces": [],
+                            "preferredNetworks": [],
+                            "defaultIpAddress": "127.0.0.1",
+                            "timeoutSeconds": 1,
+                            "defaultHostname": "localhost",
+                            "useOnlySiteLocalInterfaces": false
+                        }
+                    },
+                    "spring.jdbc-org.springframework.boot.autoconfigure.jdbc.JdbcProperties": {
+                        "prefix": "spring.jdbc",
+                        "properties": {
+                            "template": {
+                                "fetchSize": -1,
+                                "maxRows": -1
+                            }
+                        }
+                    },
+                    "spring.jta-org.springframework.boot.autoconfigure.transaction.jta.JtaProperties": {
+                        "prefix": "spring.jta",
+                        "properties": {}
+                    },
+                    "spring.data.web-org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties": {
+                        "prefix": "spring.data.web",
+                        "properties": {
+                            "pageable": {
+                                "pageParameter": "page",
+                                "sizeParameter": "size",
+                                "oneIndexedParameters": false,
+                                "prefix": "",
+                                "qualifierDelimiter": "_",
+                                "defaultPageSize": 20,
+                                "maxPageSize": 2000
+                            },
+                            "sort": {
+                                "sortParameter": "sort"
+                            }
+                        }
+                    },
+                    "spring.sleuth.annotation-org.springframework.cloud.sleuth.annotation.SleuthAnnotationProperties": {
+                        "prefix": "spring.sleuth.annotation",
+                        "properties": {
+                            "enabled": true
+                        }
+                    },
+                    "management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties": {
+                        "prefix": "management.endpoint.health",
+                        "properties": {
+                            "showDetails": "NEVER",
+                            "roles": []
+                        }
+                    },
+                    "particularityRuleProperties": {
+                        "prefix": "srk.rules",
+                        "properties": {
+                            "particularities": [
+                                {
+                                    "code": "BLA",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "SRA",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "RJB",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "CID",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "DCD",
+                                    "selfcare": false,
+                                    "bankAdvisor": false
+                                },
+                                {
+                                    "code": "ENR",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "ING",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "INB",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "INJ",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "NTZ",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "OCI",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "SAR",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "INC",
+                                    "selfcare": false,
+                                    "bankAdvisor": true
+                                },
+                                {
+                                    "code": "CER",
+                                    "selfcare": false,
+                                    "bankAdvisor": false
+                                }
+                            ]
+                        }
+                    },
+                    "spring.sleuth-org.springframework.cloud.sleuth.instrument.messaging.SleuthMessagingProperties": {
+                        "prefix": "spring.sleuth",
+                        "properties": {
+                            "integration": {
+                                "patterns": [
+                                    "!hystrixStreamOutput*",
+                                    "*"
+                                ],
+                                "enabled": false
+                            },
+                            "messaging": {
+                                "enabled": false,
+                                "rabbit": {
+                                    "enabled": false,
+                                    "remoteServiceName": "rabbitmq"
+                                },
+                                "kafka": {
+                                    "enabled": false,
+                                    "remoteServiceName": "kafka"
+                                }
+                            }
+                        }
+                    },
+                    "requestFilterProperties": {
+                        "prefix": "srk.rules.filters",
+                        "properties": {
+                            "allSources": [
+                                {
+                                    "code": "IWEF1"
+                                },
+                                {
+                                    "code": "AWWDC"
+                                },
+                                {
+                                    "code": "IWERD"
+                                },
+                                {
+                                    "code": "MNPST"
+                                },
+                                {
+                                    "code": "MC_POPUP",
+                                    "mode": "push"
+                                },
+                                {
+                                    "code": "MH_POPUP",
+                                    "mode": "push"
+                                },
+                                {
+                                    "code": "IB_POPUP",
+                                    "mode": "push"
+                                },
+                                {
+                                    "code": "IB_POPUP_MULTI",
+                                    "mode": "push"
+                                },
+                                {
+                                    "code": "IH_POPUP",
+                                    "mode": "push"
+                                },
+                                {
+                                    "code": "IP_POPUP",
+                                    "mode": "push"
+                                },
+                                {
+                                    "code": "MC_SELF",
+                                    "mode": "self"
+                                },
+                                {
+                                    "code": "MH_SELF",
+                                    "mode": "self"
+                                },
+                                {
+                                    "code": "IB_SELF",
+                                    "mode": "self"
+                                },
+                                {
+                                    "code": "IH_SELF",
+                                    "mode": "self"
+                                },
+                                {
+                                    "code": "IP_SELF",
+                                    "mode": "self"
+                                }
+                            ],
+                            "allSelfSourceCodes": [
+                                "MC_SELF",
+                                "MH_SELF",
+                                "IB_SELF",
+                                "IH_SELF",
+                                "IP_SELF"
+                            ],
+                            "channels": [
+                                {
+                                    "value": "001",
+                                    "authorized": true,
+                                    "sources": [
+                                        {
+                                            "code": "IWEF1"
+                                        },
+                                        {
+                                            "code": "AWWDC"
+                                        },
+                                        {
+                                            "code": "IWERD"
+                                        },
+                                        {
+                                            "code": "MNPST"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "value": "007",
+                                    "authorized": true,
+                                    "sources": [
+                                        {
+                                            "code": "MC_POPUP",
+                                            "mode": "push"
+                                        },
+                                        {
+                                            "code": "MH_POPUP",
+                                            "mode": "push"
+                                        },
+                                        {
+                                            "code": "IB_POPUP",
+                                            "mode": "push"
+                                        },
+                                        {
+                                            "code": "IB_POPUP_MULTI",
+                                            "mode": "push"
+                                        },
+                                        {
+                                            "code": "IH_POPUP",
+                                            "mode": "push"
+                                        },
+                                        {
+                                            "code": "IP_POPUP",
+                                            "mode": "push"
+                                        },
+                                        {
+                                            "code": "MC_SELF",
+                                            "mode": "self"
+                                        },
+                                        {
+                                            "code": "MH_SELF",
+                                            "mode": "self"
+                                        },
+                                        {
+                                            "code": "IB_SELF",
+                                            "mode": "self"
+                                        },
+                                        {
+                                            "code": "IH_SELF",
+                                            "mode": "self"
+                                        },
+                                        {
+                                            "code": "IP_SELF",
+                                            "mode": "self"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "allAgencySourceCodes": [
+                                "IWEF1",
+                                "AWWDC",
+                                "IWERD",
+                                "MNPST"
+                            ],
+                            "agencies": {
+                                "whitelist": []
+                            },
+                            "customers": {
+                                "whitelist": []
+                            },
+                            "allPushSelfcareSourceCodes": [
+                                "MC_POPUP",
+                                "MH_POPUP",
+                                "IB_POPUP",
+                                "IB_POPUP_MULTI",
+                                "IH_POPUP",
+                                "IP_POPUP"
+                            ]
+                        }
+                    },
+                    "management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties": {
+                        "prefix": "management.metrics",
+                        "properties": {
+                            "distribution": {
+                                "percentilesHistogram": {},
+                                "percentiles": {},
+                                "sla": {}
+                            },
+                            "web": {
+                                "client": {
+                                    "requestsMetricName": "http.client.requests",
+                                    "maxUriTags": 100
+                                },
+                                "server": {
+                                    "autoTimeRequests": true,
+                                    "requestsMetricName": "http.server.requests",
+                                    "maxUriTags": 100
+                                }
+                            },
+                            "enable": {},
+                            "useGlobalRegistry": true
+                        }
+                    },
+                    "spring.cloud.service-registry.auto-registration-org.springframework.cloud.client.serviceregistry.AutoServiceRegistrationProperties": {
+                        "prefix": "spring.cloud.service-registry.auto-registration",
+                        "properties": {
+                            "enabled": true,
+                            "registerManagement": true,
+                            "failFast": false
+                        }
+                    },
+                    "spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties": {
+                        "prefix": "spring.mvc",
+                        "properties": {
+                            "contentnegotiation": {
+                                "favorPathExtension": false,
+                                "favorParameter": false,
+                                "mediaTypes": {}
+                            },
+                            "servlet": {
+                                "loadOnStartup": -1
+                            },
+                            "staticPathPattern": "/**",
+                            "dispatchOptionsRequest": true,
+                            "dispatchTraceRequest": false,
+                            "ignoreDefaultModelOnRedirect": true,
+                            "logResolvedException": false,
+                            "async": {},
+                            "view": {},
+                            "localeResolver": "ACCEPT_HEADER",
+                            "pathmatch": {
+                                "useSuffixPattern": false,
+                                "useRegisteredSuffixPattern": false
+                            },
+                            "throwExceptionIfNoHandlerFound": false
+                        }
+                    },
+                    "management.info-org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties": {
+                        "prefix": "management.info",
+                        "properties": {
+                            "git": {
+                                "mode": "SIMPLE"
+                            }
+                        }
+                    },
+                    "ribbon.eager-load-org.springframework.cloud.netflix.ribbon.RibbonEagerLoadProperties": {
+                        "prefix": "ribbon.eager-load",
+                        "properties": {
+                            "enabled": false
+                        }
+                    },
+                    "spring.sleuth-org.springframework.cloud.sleuth.autoconfig.SleuthProperties": {
+                        "prefix": "spring.sleuth",
+                        "properties": {
+                            "traceId128": false,
+                            "baggageKeys": [],
+                            "supportsJoin": true,
+                            "enabled": true,
+                            "propagationKeys": []
+                        }
+                    },
+                    "flyway": {
+                        "prefix": "spring.flyway",
+                        "properties": {
+                            "cleanOnValidationError": false,
+                            "classLoader": {
+                                "parent": {
+                                    "parent": {
+                                        "parent": {}
+                                    }
+                                }
+                            },
+                            "placeholderSuffix": "}",
+                            "repeatableSqlMigrationPrefix": "R",
+                            "placeholders": {
+                                "schema": "OWN_AP22447_STK"
+                            },
+                            "validateOnMigrate": true,
+                            "callbacks": [],
+                            "mixed": false,
+                            "sqlMigrationSuffixes": [
+                                ".sql"
+                            ],
+                            "baselineDescription": "<< Flyway Baseline >>",
+                            "baselineVersion": {},
+                            "skipDefaultResolvers": false,
+                            "sqlMigrationSeparator": "__",
+                            "outOfOrder": false,
+                            "table": "flyway_schema_history",
+                            "group": false,
+                            "resolvers": [],
+                            "baselineOnMigrate": true,
+                            "encoding": "UTF-8",
+                            "placeholderPrefix": "${",
+                            "sqlMigrationPrefix": "V",
+                            "ignoreMissingMigrations": false,
+                            "cleanDisabled": false,
+                            "placeholderReplacement": true,
+                            "ignoreFutureMigrations": true,
+                            "schemas": [
+                                "OWN_AP22447_STK"
+                            ],
+                            "locations": [
+                                "classpath:db/migration"
+                            ],
+                            "sqlMigrationSuffix": ".sql",
+                            "skipDefaultCallbacks": false,
+                            "dataSource": {
+                                "autoCommit": true,
+                                "loginTimeout": 0
+                            }
+                        }
+                    },
+                    "management.endpoint.configprops-org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties": {
+                        "prefix": "management.endpoint.configprops",
+                        "properties": {}
+                    },
+                    "feign.httpclient-org.springframework.cloud.openfeign.support.FeignHttpClientProperties": {
+                        "prefix": "feign.httpclient",
+                        "properties": {
+                            "timeToLive": 900,
+                            "timeToLiveUnit": "SECONDS",
+                            "followRedirects": true,
+                            "disableSslValidation": false,
+                            "connectionTimerRepeat": 3000,
+                            "maxConnectionsPerRoute": 50,
+                            "connectionTimeout": 2000,
+                            "maxConnections": 200
+                        }
+                    },
+                    "personRulesProperties": {
+                        "prefix": "srk.rules.person",
+                        "properties": {
+                            "eerReferenceDate": "31-12-2015"
+                        }
+                    },
+                    "blueBlankProperties": {
+                        "prefix": "srk.blue-bank",
+                        "properties": {
+                            "agencyCodes": [
+                                "03102",
+                                "03103",
+                                "03182",
+                                "03183",
+                                "03184",
+                                "03375",
+                                "03376",
+                                "03377",
+                                "03106",
+                                "03107",
+                                "03108",
+                                "03109"
+                            ]
+                        }
+                    },
+                    "spring.flyway-org.springframework.boot.autoconfigure.flyway.FlywayProperties": {
+                        "prefix": "spring.flyway",
+                        "properties": {
+                            "checkLocation": true,
+                            "password": "******",
+                            "locations": [
+                                "classpath:db/migration"
+                            ],
+                            "initSqls": [],
+                            "user": "OWN_AP22447_STK",
+                            "enabled": true
+                        }
+                    },
+                    "householdSolicitationFeatureProperties": {
+                        "prefix": "srk.household-solicitation-feature",
+                        "properties": {
+                            "sources": [
+                                "IB_POPUP"
+                            ],
+                            "enabled": true
+                        }
+                    },
+                    "management.endpoints.jmx-org.springframework.boot.actuate.autoconfigure.endpoint.jmx.JmxEndpointProperties": {
+                        "prefix": "management.endpoints.jmx",
+                        "properties": {
+                            "uniqueNames": false,
+                            "staticNames": {},
+                            "exposure": {
+                                "include": [
+                                    "*"
+                                ],
+                                "exclude": []
+                            },
+                            "domain": "SRK"
+                        }
+                    },
+                    "management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties": {
+                        "prefix": "management.endpoints.web.cors",
+                        "properties": {
+                            "allowedHeaders": [],
+                            "allowedMethods": [],
+                            "allowedOrigins": [],
+                            "maxAge": {
+                                "units": [
+                                    "SECONDS",
+                                    "NANOS"
+                                ]
+                            },
+                            "exposedHeaders": []
+                        }
+                    },
+                    "management.metrics.export.simple-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties": {
+                        "prefix": "management.metrics.export.simple",
+                        "properties": {
+                            "mode": "CUMULATIVE",
+                            "step": {
+                                "units": [
+                                    "SECONDS",
+                                    "NANOS"
+                                ]
+                            }
+                        }
+                    },
+                    "spring.sleuth.http.legacy-org.springframework.cloud.sleuth.instrument.web.SleuthHttpLegacyProperties": {
+                        "prefix": "spring.sleuth.http.legacy",
+                        "properties": {
+                            "enabled": false
+                        }
+                    },
+                    "notificationClientProperties": {
+                        "prefix": "srk.notification-client",
+                        "properties": {
+                            "allowedChannels": [
+                                "002",
+                                "004",
+                                "007"
+                            ],
+                            "enabled": true
+                        }
+                    },
+                    "server-org.springframework.boot.autoconfigure.web.ServerProperties": {
+                        "prefix": "server",
+                        "properties": {
+                            "undertow": {
+                                "maxHttpPostSize": -1,
+                                "eagerFilterInit": true,
+                                "accesslog": {
+                                    "enabled": false,
+                                    "pattern": "common",
+                                    "prefix": "access_log.",
+                                    "suffix": "log",
+                                    "dir": "/applis/logs/22447-cip00/wlc/sa-22447_cip00_stk-biz-1/sa-22447_cip00_stk-biz-1/logs",
+                                    "rotate": true
+                                }
+                            },
+                            "port": 9090,
+                            "maxHttpHeaderSize": 0,
+                            "tomcat": {
+                                "accesslog": {
+                                    "enabled": false,
+                                    "pattern": "common",
+                                    "directory": "logs",
+                                    "prefix": "access_log",
+                                    "suffix": ".log",
+                                    "rotate": true,
+                                    "renameOnRotate": false,
+                                    "fileDateFormat": ".yyyy-MM-dd",
+                                    "requestAttributesEnabled": false,
+                                    "buffered": true
+                                },
+                                "internalProxies": "10\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}|192\\.168\\.\\d{1,3}\\.\\d{1,3}|169\\.254\\.\\d{1,3}\\.\\d{1,3}|127\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}|172\\.1[6-9]{1}\\.\\d{1,3}\\.\\d{1,3}|172\\.2[0-9]{1}\\.\\d{1,3}\\.\\d{1,3}|172\\.3[0-1]{1}\\.\\d{1,3}\\.\\d{1,3}|0:0:0:0:0:0:0:1|::1",
+                                "protocolHeaderHttpsValue": "https",
+                                "portHeader": "X-Forwarded-Port",
+                                "backgroundProcessorDelay": {
+                                    "units": [
+                                        "SECONDS",
+                                        "NANOS"
+                                    ]
+                                },
+                                "maxThreads": 200,
+                                "minSpareThreads": 10,
+                                "maxHttpPostSize": 2097152,
+                                "maxHttpHeaderSize": 0,
+                                "redirectContextRoot": true,
+                                "uriEncoding": "UTF-8",
+                                "maxConnections": 10000,
+                                "acceptCount": 100,
+                                "additionalTldSkipPatterns": [],
+                                "resource": {}
+                            },
+                            "servlet": {
+                                "contextParameters": {},
+                                "contextPath": "",
+                                "applicationDisplayName": "application",
+                                "path": "/"
+                            },
+                            "jetty": {
+                                "accesslog": {
+                                    "enabled": false,
+                                    "retentionPeriod": 31,
+                                    "append": false,
+                                    "extendedFormat": false,
+                                    "dateFormat": "dd/MMM/yyyy:HH:mm:ss Z",
+                                    "timeZone": "GMT",
+                                    "logCookies": false,
+                                    "logServer": false,
+                                    "logLatency": false
+                                },
+                                "maxHttpPostSize": 200000,
+                                "acceptors": -1,
+                                "selectors": -1
+                            },
+                            "error": {
+                                "path": "/error",
+                                "includeException": false,
+                                "includeStacktrace": "NEVER",
+                                "whitelabel": {
+                                    "enabled": true
+                                }
+                            }
+                        }
+                    },
+                    "spring.transaction-org.springframework.boot.autoconfigure.transaction.TransactionProperties": {
+                        "prefix": "spring.transaction",
+                        "properties": {}
+                    },
+                    "selfcarePushRejectDocProperties": {
+                        "prefix": "srk.selfcare-push-rejected-doc-feature",
+                        "properties": {
+                            "enabled": true
+                        }
+                    },
+                    "spring.http.encoding-org.springframework.boot.autoconfigure.http.HttpEncodingProperties": {
+                        "prefix": "spring.http.encoding",
+                        "properties": {
+                            "charset": "UTF-8",
+                            "force": false,
+                            "forceRequest": false,
+                            "forceResponse": false
+                        }
+                    },
+                    "management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties": {
+                        "prefix": "management.endpoints.web",
+                        "properties": {
+                            "pathMapping": {},
+                            "exposure": {
+                                "include": [
+                                    "*"
+                                ],
+                                "exclude": []
+                            },
+                            "basePath": "/actuator"
+                        }
+                    },
+                    "spring.jms-org.springframework.boot.autoconfigure.jms.JmsProperties": {
+                        "prefix": "spring.jms",
+                        "properties": {
+                            "listener": {
+                                "autoStartup": true,
+                                "concurrency": 10,
+                                "maxConcurrency": 20
+                            },
+                            "template": {},
+                            "pubSubDomain": false
+                        }
+                    },
+                    "spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties": {
+                        "prefix": "spring.jackson",
+                        "properties": {
+                            "serialization": {},
+                            "defaultPropertyInclusion": "NON_NULL",
+                            "parser": {},
+                            "deserialization": {},
+                            "generator": {},
+                            "mapper": {}
+                        }
+                    },
+                    "spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties": {
+                        "prefix": "spring.info",
+                        "properties": {
+                            "build": {
+                                "location": {}
+                            },
+                            "git": {
+                                "location": {}
+                            }
+                        }
+                    },
+                    "spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties": {
+                        "prefix": "spring.datasource",
+                        "properties": {
+                            "password": "******",
+                            "initializationMode": "EMBEDDED",
+                            "driverClassName": "oracle.jdbc.OracleDriver",
+                            "generateUniqueName": false,
+                            "xa": {
+                                "properties": {}
+                            },
+                            "separator": ";",
+                            "url": "jdbc:oracle:thin:@D-22447-04142-P.fr.net.intra:1521:D22447AP10",
+                            "platform": "all",
+                            "continueOnError": false,
+                            "username": "OWN_AP22447_STK"
+                        }
+                    },
+                    "spring.sleuth.scheduled-org.springframework.cloud.sleuth.instrument.scheduling.SleuthSchedulingProperties": {
+                        "prefix": "spring.sleuth.scheduled",
+                        "properties": {
+                            "skipPattern": "org.springframework.cloud.netflix.hystrix.stream.HystrixStreamTask",
+                            "enabled": true
+                        }
+                    },
+                    "spring.cloud.loadbalancer.retry-org.springframework.cloud.client.loadbalancer.LoadBalancerRetryProperties": {
+                        "prefix": "spring.cloud.loadbalancer.retry",
+                        "properties": {
+                            "enabled": true
+                        }
+                    },
+                    "eventReprocessingFeatureProperties": {
+                        "prefix": "srk.event-reprocessing-feature",
+                        "properties": {
+                            "enabled": true
+                        }
+                    },
+                    "spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties": {
+                        "prefix": "spring.resources",
+                        "properties": {
+                            "addMappings": true,
+                            "chain": {
+                                "cache": true,
+                                "htmlApplicationCache": false,
+                                "gzipped": false,
+                                "strategy": {
+                                    "fixed": {
+                                        "enabled": false,
+                                        "paths": [
+                                            "/**"
+                                        ]
+                                    },
+                                    "content": {
+                                        "enabled": false,
+                                        "paths": [
+                                            "/**"
+                                        ]
+                                    }
+                                }
+                            },
+                            "cache": {
+                                "cachecontrol": {}
+                            },
+                            "staticLocations": [
+                                "classpath:/META-INF/resources/",
+                                "classpath:/resources/",
+                                "classpath:/static/",
+                                "classpath:/public/"
+                            ]
+                        }
+                    },
+                    "spring.sleuth.web-org.springframework.cloud.sleuth.instrument.web.SleuthWebProperties": {
+                        "prefix": "spring.sleuth.web",
+                        "properties": {
+                            "skipPattern": "/api-docs.*|/autoconfig|/configprops|/dump|/health|/info|/metrics.*|/mappings|/trace|/swagger.*|.*\\.png|.*\\.css|.*\\.js|.*\\.html|/favicon.ico|/hystrix.stream|/application/.*|/actuator.*|/cloudfoundryapplication",
+                            "enabled": true
+                        }
+                    },
+                    "scopedTarget.dataSource": {
+                        "prefix": "spring.datasource.hikari",
+                        "properties": {
+                            "validationTimeout": 5000,
+                            "hikariPoolMXBean": {
+                                "metricsTracker": {}
+                            },
+                            "initializationFailFast": true,
+                            "jdbc4ConnectionTest": false,
+                            "minimumIdle": 10,
+                            "password": "******",
+                            "metricsTrackerFactory": {},
+                            "dataSourceProperties": {},
+                            "loginTimeout": 30,
+                            "autoCommit": true,
+                            "connectionTimeout": 30000,
+                            "poolName": "HikariPool-1",
+                            "initializationFailTimeout": 1,
+                            "readOnly": false,
+                            "registerMbeans": false,
+                            "healthCheckProperties": {},
+                            "isolateInternalQueries": false,
+                            "leakDetectionThreshold": 0,
+                            "maxLifetime": 1800000,
+                            "allowPoolSuspension": false,
+                            "idleTimeout": 600000,
+                            "driverClassName": "oracle.jdbc.OracleDriver",
+                            "jdbcUrl": "jdbc:oracle:thin:@D-22447-04142-P.fr.net.intra:1521:D22447AP10",
+                            "maximumPoolSize": 10,
+                            "username": "OWN_AP22447_STK"
+                        }
+                    },
+                    "management.health.status-org.springframework.boot.actuate.autoconfigure.health.HealthIndicatorProperties": {
+                        "prefix": "management.health.status",
+                        "properties": {
+                            "httpMapping": {}
+                        }
+                    },
+                    "management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties": {
+                        "prefix": "management.server",
+                        "properties": {
+                            "servlet": {
+                                "contextPath": ""
+                            }
+                        }
+                    },
+                    "ibm.mq-com.ibm.mq.spring.boot.MQConfigurationProperties": {
+                        "prefix": "ibm.mq",
+                        "properties": {
+                            "userAuthenticationMQCSP": true,
+                            "password": "******",
+                            "queueManager": "FRCIP01T",
+                            "useIBMCipherMappings": true,
+                            "connName": "FRCIP01T(48601)",
+                            "channel": "CLICIP01.FRCIP01T.T1",
+                            "pool": {
+                                "enabled": false,
+                                "blockIfFull": true,
+                                "blockIfFullTimeout": {
+                                    "units": [
+                                        "SECONDS",
+                                        "NANOS"
+                                    ]
+                                },
+                                "idleTimeout": {
+                                    "units": [
+                                        "SECONDS",
+                                        "NANOS"
+                                    ]
+                                },
+                                "maxConnections": 1,
+                                "maxSessionsPerConnection": 500,
+                                "timeBetweenExpirationCheck": {
+                                    "units": [
+                                        "SECONDS",
+                                        "NANOS"
+                                    ]
+                                },
+                                "useAnonymousProducers": true
+                            },
+                            "user": ""
+                        }
+                    },
+                    "spring.sleuth.log.slf4j-org.springframework.cloud.sleuth.log.SleuthSlf4jProperties": {
+                        "prefix": "spring.sleuth.log.slf4j",
+                        "properties": {
+                            "enabled": true
+                        }
+                    },
+                    "spring.sleuth.keys-org.springframework.cloud.sleuth.instrument.web.TraceKeys": {
+                        "prefix": "spring.sleuth.keys",
+                        "properties": {
+                            "http": {
+                                "prefix": "http.",
+                                "headers": []
+                            }
+                        }
+                    },
+                    "feign.client-org.springframework.cloud.openfeign.FeignClientProperties": {
+                        "prefix": "feign.client",
+                        "properties": {
+                            "defaultToProperties": true,
+                            "config": {
+                                "itk-client": {
+                                    "loggerLevel": "FULL"
+                                },
+                                "edoc-client": {
+                                    "loggerLevel": "FULL"
+                                },
+                                "rike-client": {
+                                    "loggerLevel": "FULL"
+                                }
+                            },
+                            "defaultConfig": "default"
+                        }
+                    },
+                    "management.endpoint.env-org.springframework.boot.actuate.autoconfigure.env.EnvironmentEndpointProperties": {
+                        "prefix": "management.endpoint.env",
+                        "properties": {}
+                    },
+                    "management.endpoint.logfile-org.springframework.boot.actuate.autoconfigure.logging.LogFileWebEndpointProperties": {
+                        "prefix": "management.endpoint.logfile",
+                        "properties": {}
+                    },
+                    "simpleDiscoveryProperties": {
+                        "prefix": "spring.cloud.discovery.client.simple",
+                        "properties": {
+                            "instances": {},
+                            "local": {
+                                "uri": "http://s00vl9999164.fr.net.intra:9090",
+                                "metadata": {},
+                                "serviceId": "SRK"
+                            }
+                        }
+                    },
+                    "ribbon-org.springframework.cloud.netflix.ribbon.ServerIntrospectorProperties": {
+                        "prefix": "ribbon",
+                        "properties": {
+                            "securePorts": [
+                                443,
+                                8443
+                            ]
+                        }
+                    },
+                    "management.endpoint.hystrix-org.springframework.cloud.netflix.hystrix.HystrixProperties": {
+                        "prefix": "management.endpoint.hystrix",
+                        "properties": {
+                            "config": {}
+                        }
+                    },
+                    "edocDomainProperties": {
+                        "prefix": "srk.edoc",
+                        "properties": {
+                            "productLabel": "Sollicitation KYC",
+                            "autoAcceptationAllowed": true,
+                            "collectManagementAct": [],
+                            "familiesManagementAct": [
+                                "OB"
+                            ],
+                            "autoClosingDelay": 0,
+                            "rejectionComment": "Ne correspond pas au document attendu",
+                            "journeyCode": "800",
+                            "controlIterationAllowed": 1,
+                            "families": [
+                                {
+                                    "label": "Justificatif d'identité",
+                                    "category": "OB",
+                                    "propertyType": "Liste",
+                                    "position": 1,
+                                    "types": [
+                                        {
+                                            "label": "Carte Nationale d'Identité",
+                                            "additionalInformation": "Merci de télécharger les recto ET verso",
+                                            "digitalAllowed": true,
+                                            "paperAllowed": false,
+                                            "edocType": "00000000000000001",
+                                            "enableReuse": false,
+                                            "controlRequired": 3,
+                                            "pendingDocument": false,
+                                            "position": 1,
+                                            "videoCodingDelay": "NotAllowed",
+                                            "autoRecognition": true,
+                                            "indexes": [
+                                                {
+                                                    "code": "10000000000000031",
+                                                    "label": "Nom de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 2,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000005",
+                                                    "label": "Date de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 4,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000007",
+                                                    "label": "Pays de nationalité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 5,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000008",
+                                                    "label": "Date d'émission",
+                                                    "category": "FA",
+                                                    "indexable": false,
+                                                    "position": 6,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000033",
+                                                    "label": "Prénom",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 3,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000001",
+                                                    "label": "Civilité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 1,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000037",
+                                                    "label": "Numéro de carte d'identité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 7,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000039",
+                                                    "label": "Bande MRZ",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 8,
+                                                    "videoCoding": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Pièce d'identité étrangère",
+                                            "additionalInformation": "Merci de veiller à la qualité du scan",
+                                            "digitalAllowed": true,
+                                            "paperAllowed": false,
+                                            "edocType": "00000000000000001",
+                                            "enableReuse": false,
+                                            "controlRequired": 3,
+                                            "pendingDocument": false,
+                                            "position": 2,
+                                            "videoCodingDelay": "NotAllowed",
+                                            "autoRecognition": true,
+                                            "indexes": [
+                                                {
+                                                    "code": "10000000000000009",
+                                                    "label": "Date d'expiration",
+                                                    "category": "FA",
+                                                    "indexable": false,
+                                                    "position": 6,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000039",
+                                                    "label": "Bande MRZ",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 8,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000005",
+                                                    "label": "Date de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 4,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000007",
+                                                    "label": "Pays de nationalité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 5,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000037",
+                                                    "label": "Numéro de carte d'identité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 7,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000001",
+                                                    "label": "Civilité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 1,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000031",
+                                                    "label": "Nom de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 2,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000033",
+                                                    "label": "Prénom",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 3,
+                                                    "videoCoding": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Passeport",
+                                            "additionalInformation": "Merci de veiller à la qualité du scan",
+                                            "digitalAllowed": true,
+                                            "paperAllowed": false,
+                                            "edocType": "00000000000000002",
+                                            "enableReuse": false,
+                                            "controlRequired": 3,
+                                            "pendingDocument": false,
+                                            "position": 3,
+                                            "videoCodingDelay": "NotAllowed",
+                                            "autoRecognition": true,
+                                            "indexes": [
+                                                {
+                                                    "code": "10000000000000005",
+                                                    "label": "Date de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 4,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000007",
+                                                    "label": "Pays de nationalité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 5,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000033",
+                                                    "label": "Prénom",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 3,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000001",
+                                                    "label": "Civilité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 1,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000009",
+                                                    "label": "Date d'expiration",
+                                                    "category": "FA",
+                                                    "indexable": false,
+                                                    "position": 6,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000039",
+                                                    "label": "MRZ",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 8,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000037",
+                                                    "label": "Numéro de passeport",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 7,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000031",
+                                                    "label": "Nom de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 2,
+                                                    "videoCoding": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Titre de séjour",
+                                            "additionalInformation": "Merci de télécharger les recto ET verso",
+                                            "digitalAllowed": true,
+                                            "paperAllowed": false,
+                                            "edocType": "00000000000000003",
+                                            "enableReuse": false,
+                                            "controlRequired": 3,
+                                            "pendingDocument": false,
+                                            "position": 4,
+                                            "videoCodingDelay": "NotAllowed",
+                                            "autoRecognition": true,
+                                            "indexes": [
+                                                {
+                                                    "code": "10000000000000007",
+                                                    "label": "Pays de Nationalité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 5,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000005",
+                                                    "label": "Date de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 4,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000001",
+                                                    "label": "Civilité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 1,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000009",
+                                                    "label": "Date d'expiration",
+                                                    "category": "FA",
+                                                    "indexable": false,
+                                                    "position": 6,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000039",
+                                                    "label": "Bande MRZ",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 8,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000037",
+                                                    "label": "Numéro de titre de séjour",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 7,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000033",
+                                                    "label": "Prénom",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 3,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000031",
+                                                    "label": "Nom de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 2,
+                                                    "videoCoding": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "Récépissé de titre de séjour",
+                                            "additionalInformation": "Merci de veiller à la qualité du scan",
+                                            "digitalAllowed": true,
+                                            "paperAllowed": false,
+                                            "edocType": "00000000000000057",
+                                            "enableReuse": false,
+                                            "controlRequired": 3,
+                                            "pendingDocument": false,
+                                            "position": 5,
+                                            "videoCodingDelay": "NotAllowed",
+                                            "autoRecognition": true,
+                                            "indexes": [
+                                                {
+                                                    "code": "10000000000000001",
+                                                    "label": "Civilité",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 1,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000005",
+                                                    "label": "Date de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 4,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000002",
+                                                    "label": "Nom de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 2,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000024",
+                                                    "label": "Lieu de naissance",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 5,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000004",
+                                                    "label": "Prénom",
+                                                    "category": "OB",
+                                                    "indexable": false,
+                                                    "position": 3,
+                                                    "videoCoding": true
+                                                },
+                                                {
+                                                    "code": "10000000000000009",
+                                                    "label": "Date d'expiration",
+                                                    "category": "FA",
+                                                    "indexable": false,
+                                                    "position": 6,
+                                                    "videoCoding": true
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "applicationCode": "AP22447",
+                            "piecesManagementAct": [
+                                "RC",
+                                "RF",
+                                "VA",
+                                "DP"
+                            ]
+                        }
+                    },
+                    "spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties": {
+                        "prefix": "spring.servlet.multipart",
+                        "properties": {
+                            "fileSizeThreshold": "0",
+                            "maxFileSize": "1MB",
+                            "maxRequestSize": "10MB",
+                            "enabled": true,
+                            "resolveLazily": false
+                        }
+                    },
+                    "spring.sleuth.rxjava.schedulers-org.springframework.cloud.sleuth.instrument.rxjava.SleuthRxJavaSchedulersProperties": {
+                        "prefix": "spring.sleuth.rxjava.schedulers",
+                        "properties": {
+                            "ignoredthreads": [
+                                "HystrixMetricPoller",
+                                "^RxComputation.*$"
+                            ],
+                            "hook": {
+                                "enabled": true
+                            }
+                        }
+                    },
+                    "diskSpaceHealthIndicatorProperties": {
+                        "prefix": "management.health.diskspace",
+                        "properties": {
+                            "path": "/applis/logs/22447-cip00/wlc/sa-22447_cip00_stk-biz-1/sa-22447_cip00_stk-biz-1/.",
+                            "threshold": 10485760
+                        }
+                    }
+                },
+                "parentId": "bootstrap"
+            },
+            "bootstrap": {
+                "beans": {
+                    "spring.cloud.config-org.springframework.cloud.bootstrap.config.PropertySourceBootstrapProperties": {
+                        "prefix": "spring.cloud.config",
+                        "properties": {
+                            "overrideSystemProperties": true,
+                            "overrideNone": false,
+                            "allowOverride": true
+                        }
+                    },
+                    "encrypt-org.springframework.cloud.bootstrap.encrypt.KeyProperties": {
+                        "prefix": "encrypt",
+                        "properties": {
+                            "salt": "deadbeef",
+                            "failOnError": true,
+                            "keyStore": {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
