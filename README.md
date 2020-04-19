@@ -24,6 +24,10 @@ npm install
 npm run serve
 ```
 
+To run a fake back-end, you can install json-server (global) to run a fake server based on data in `src/data`:
+Install json-server: `npm install -g json-server`
+Run the server: `json-server src/data/db.js`
+
 ### Compiles and minifies for production
 ```
 npm run build
