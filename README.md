@@ -30,7 +30,8 @@ Install json-server: `npm install -g json-server`
 
 Run the server: `json-server --watch src/data/db.js`
 
-You can use a container with Spring/Actuator with running: `docker run -p 8080:8080 abhay948docker/spring-actuator:2.0`
+Or, you can use a demo project such as this one https://github.com/callicoder/spring-boot-actuator-demo to have dynamic values for metrics (and a real app running in the background, that is a better way !)
+
 
 ### Compiles and minifies for production
 ```
