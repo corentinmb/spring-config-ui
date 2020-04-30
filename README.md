@@ -30,6 +30,8 @@ Install json-server: `npm install -g json-server`
 
 Run the server: `json-server --watch src/data/db.js`
 
+You can use a container with Spring/Actuator with running: `docker run -p 8080:8080 abhay948docker/spring-actuator:2.0`
+
 ### Compiles and minifies for production
 ```
 npm run build
