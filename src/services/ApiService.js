@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'http://localhost:8080/actuator',
   withCredentials: false, // This is the default
   headers: {
     Accept: 'application/json',
@@ -16,5 +16,8 @@ export default {
   },
   getEnv () {
     return apiClient.get('/env')
+  },
+  getMetricInfo (metric) {
+    return apiClient.get('/metrics/' + metric)
   }
 }

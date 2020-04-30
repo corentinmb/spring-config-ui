@@ -3,20 +3,20 @@ import ApiService from '@/services/ApiService.js'
 export const namespaced = true
 
 export const state = {
-  configprops: []
+  jvmUsed: 0
 }
 
 export const mutations = {
-  SET_CONFIGPROPS (state, configprops) {
-    state.configprops = configprops
+  SET_JVMUSED (state, jvmUsed) {
+    state.jvmUsed = jvmUsed
   }
 }
 
 export const actions = {
-  fetchConfigProps ({ commit, dispatch, state }) {
-    return ApiService.getConfigprops()
+  fetchMetrics ({ commit, dispatch, state }) {
+    return ApiService.getMetricInfo('jvm.memory.used')
       .then(response => {
-        commit('SET_CONFIGPROPS', response.data.contexts.application.beans)
+        commit('SET_JVMUSED', response.data.measurements[0].value)
       })
       .catch(error => {
         console.log(error)

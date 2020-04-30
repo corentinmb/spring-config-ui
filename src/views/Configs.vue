@@ -1,25 +1,13 @@
 <template>
   <v-container fluid>
     <v-col cols="12">
-          <v-text-field
-            label="Search a config property"
-            solo
-            v-model="search"
-          ></v-text-field>
-        </v-col>
+      <v-text-field label="Search a config property" solo v-model="search"></v-text-field>
+    </v-col>
     <v-row>
-      <v-col cols="12">
-        <v-row class="grey lighten-5 mb-3" style="height: 300px;">
-          <v-card
-            v-for="(c,i) in filteredList"
-            :key="`config-${i}`"
-            class="ma-3 pa-3"
-            outlined
-            tile
-          >
-            <card-content :data="c[1]" :title="c[0]"></card-content>
-          </v-card>
-        </v-row>
+      <v-col cols="12" sm="12" md="6" lg="4" v-for="(c,i) in filteredList" :key="`config-${i}`">
+        <v-card class="pa-3" width="100%" height="100%">
+          <card-content :data="c[1]" :title="c[0]"></card-content>
+        </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -46,11 +34,15 @@ export default {
   computed: {
     ...mapState(['configprops']),
     filteredList () {
-      const configs = Object.keys(store.state.configprops.configprops).map(function (key) {
-        return [key, store.state.configprops.configprops[key]]
-      })
+      const configs = Object.keys(store.state.configprops.configprops).map(
+        function (key) {
+          return [key, store.state.configprops.configprops[key]]
+        }
+      )
       return configs.filter(c => {
-        return JSON.stringify(c).toLowerCase().includes(this.search.toLowerCase())
+        return JSON.stringify(c)
+          .toLowerCase()
+          .includes(this.search.toLowerCase())
       })
     }
   },
