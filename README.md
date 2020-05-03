@@ -24,13 +24,14 @@ npm install
 npm run serve
 ```
 
-To run a fake back-end, you can install json-server (global) to run a fake server based on data in `src/data`
 
-Install json-server: `npm install -g json-server`
+### Simulate back-end server
 
-Run the server: `json-server --watch src/data/db.js`
+You can create a Spring Boot application (with Actuator included) or run this Docker image which is ready:
 
-Or, you can use a demo project such as this one https://github.com/callicoder/spring-boot-actuator-demo to have dynamic values for metrics (and a real app running in the background, that is a better way !)
+`docker run -p 8080:8080 corentinmb/spring-boot-actuator`
+
+And access `localhost:8080/actuator`
 
 
 ### Compiles and minifies for production
