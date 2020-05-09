@@ -3,20 +3,21 @@ import ApiService from '@/services/ApiService.js'
 export const namespaced = true
 
 export const state = {
-  jvmUsed: 0
+  interval: 5000,
+  metrics: []
 }
 
 export const mutations = {
-  SET_JVMUSED (state, jvmUsed) {
-    state.jvmUsed = jvmUsed
+  ADD_METRIC (state, { metricName, metricInfo }) {
+    state.metrics.push({ name: metricName, infos: metricInfo })
   }
 }
 
 export const actions = {
-  fetchMetrics ({ commit, dispatch, state }) {
-    return ApiService.getMetricInfo('jvm.memory.used')
+  fetchMetric ({ commit, dispatch, state }, metricName) {
+    return ApiService.getMetricInfo(metricName)
       .then(response => {
-        commit('SET_JVMUSED', response.data.measurements[0].value)
+        commit('ADD_METRIC', { metricName: metricName, metricInfo: response.data })
       })
       .catch(error => {
         console.log(error)
@@ -24,4 +25,7 @@ export const actions = {
   }
 }
 export const getters = {
+  metrics () {
+    return state.metrics
+  }
 }

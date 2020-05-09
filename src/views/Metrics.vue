@@ -1,30 +1,28 @@
 <template>
   <v-container fluid>
-    <v-col cols="12">{{jvmUsed}}</v-col>
+    <v-row dense>
+    <v-flex xs3 offset-xs3><card-metric metric="jvm.memory.used"></card-metric></v-flex>
+    <card-metric metric="jvm.memory.max"></card-metric>
+    <card-metric metric="system.cpu.usage"></card-metric>
+    <card-metric metric="system.cpu.count"></card-metric>
+    <card-metric metric="http.server.requests"></card-metric>
+    <card-metric metric="process.start.time"></card-metric>
+    </v-row>
   </v-container>
 </template>
 
 <script>
-import store from '@/store'
-
-function refresh () {
-  store.dispatch('metrics/fetchMetrics')
-  setTimeout(refresh, 5000)
-}
+import CardMetric from '@/components/CardMetric'
 
 export default {
+  components: {
+    CardMetric
+  },
   data: function () {
     return {
-      search: ''
+      search: '',
+      refreshTimeout: {}
     }
-  },
-  computed: {
-    jvmUsed () {
-      return store.state.metrics.jvmUsed
-    }
-  },
-  created () {
-    refresh()
   }
 }
 </script>

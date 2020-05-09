@@ -6,7 +6,7 @@
     <v-row>
       <v-col cols="12" sm="12" md="6" lg="4" v-for="(c,i) in filteredList" :key="`config-${i}`">
         <v-card class="pa-3" width="100%" height="100%">
-          <card-content :data="c[1]" :title="c[0]"></card-content>
+          <card-config :data="c[1]" :title="c[0]"></card-config>
         </v-card>
       </v-col>
     </v-row>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import CardContent from '@/components/CardContent'
+import CardConfig from '@/components/CardConfig'
 
 import store from '@/store'
 import { mapState } from 'vuex'
@@ -46,6 +46,6 @@ export default {
       })
     }
   },
-  components: { CardContent }
+  components: { CardConfig }
 }
 </script>
