@@ -1,16 +1,24 @@
 <template>
-  <v-card>
-    <v-card-title>{{infos.value}} {{infos.unit}}</v-card-title>
+    <v-col cols="12" sm="12" md="6" lg="4">
+  <v-card class="d-flex flex-column pa-3" width="100%" height="100%">
+    <v-card-text>
+      <p class="display-1 text--primary">
+        {{infos.value}}
+      </p>
+      <p> {{infos.unit}}</p>
+      <div class="text--primary">{{infos.name}}</div>
+    </v-card-text>
+    <v-spacer></v-spacer>
     <v-card-actions>
-      <v-spacer></v-spacer>
+      <v-btn
+        text
+        color="deep-purple accent-4"
+      >
+        Learn More
+      </v-btn>
     </v-card-actions>
-
-    <v-expand-transition>
-      <div>
-        <v-divider></v-divider>
-      </div>
-    </v-expand-transition>
-  </v-card>
+    </v-card>
+    </v-col>
 </template>
 
 <script>
@@ -33,18 +41,28 @@ export default {
   },
   methods: {
     filterMetricsWithCurrentMetric () {
-      this.infos = { value: this.getValue(this.metric), unit: this.getUnit(this.metric) }
+      this.infos = { name: this.getName(), value: this.getValue(), unit: this.getUnit() }
     },
-    getMetric (metricName) {
-      return this.metrics.find(m => m.name === metricName)
+    getMetric () {
+      return this.metrics.find(m => m.name === this.metric)
     },
-    getValue (metricName) {
-      return this.getMetric(metricName).infos.measurements[0].value
+    getValue () {
+      const val = this.getMetric().infos.measurements[0].value
+      if (this.type === 'percentage') {
+        return Math.round(val * 100)
+      } else if (this.type === 'time') {
+        // TODO: Use datetime lib to format correctly the time elapsed (in seconds)
+      } else {
+        return val
+      }
     },
-    getUnit (metricName) {
-      return this.getMetric(metricName).infos.baseUnit
+    getUnit () {
+      return this.getMetric().infos.baseUnit
+    },
+    getName () {
+      return this.getMetric().infos.description
     }
   },
-  props: ['metric']
+  props: ['metric', 'type']
 }
 </script>
