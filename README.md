@@ -9,8 +9,8 @@ I created this project to learn about VueJS. You'll find some key concepts about
 - [x] Complete Metrics page (viewing progress bar for data such as CPU, MEM, DISK...)
 - [x] Complete Configs page (viewing information with good UI UX, auto detects values (thresholds, size...)
 - [x] Complete Settings page
-- [ ] Documentation
-- [ ] Dockerize the whole app
+- [x] Documentation
+- [x] Dockerize the whole app
 
 ## Project setup
 ```
