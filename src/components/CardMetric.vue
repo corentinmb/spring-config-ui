@@ -75,6 +75,17 @@ export default {
       }, this.refreshInterval * 1000)
     },
     fillInfos () {
+      switch (this.getMetric().infos.baseUnit) {
+        case 'seconds':
+          this.type = 'time'
+          break
+        case 'bytes':
+          this.type = 'size'
+          break
+        case null:
+          this.type = 'percentage'
+          break
+      }
       this.infos = { name: this.getName(), value: this.getValue(), unit: this.getUnit() }
     },
     getMetric () {

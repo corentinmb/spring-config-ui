@@ -12,7 +12,6 @@ const apiClient = axios.create({
 
 apiClient.interceptors.request.use(
   config => {
-    console.log(store.state.settings.baseUrl)
     config.baseURL = store.state.settings.baseUrl
     return config
   }, error => Promise.reject(error))
@@ -26,6 +25,9 @@ export default {
   },
   getMetricInfo (metric) {
     return apiClient.get('/metrics/' + metric)
+  },
+  getAvailableMetrics () {
+    return apiClient.get('/metrics')
   },
   getServerInfo () {
     return apiClient.get('/health')
