@@ -2,17 +2,15 @@
 
 I created this project to learn about VueJS. You'll find some key concepts about this frameworks and I'll to manage all of this stuff in a "real app" way :) (#NoMoreHelloWorld #AllInOneFileBashing)
 
-# WIP
 - [x] Init project with Vue CLI (ESLint, VueRouter, VueX, Vuetify...)
 - [x] Managing data with services and stores (mutations/action) from VueX
 - [x] Routing each page
-- [ ] Complete Home page (presentation of the project)
-- [ ] Complete Metrics page (viewing progress bar for data such as CPU, MEM, DISK...)
-- [ ] Complete Configs page (viewing information with good UI UX, auto detects values (thresholds, size...)
-- [ ] Complete About page (who am I, tutorials I used, MOOC I followed...)
+- [x] Complete Home page (presentation of the project)
+- [x] Complete Metrics page (viewing progress bar for data such as CPU, MEM, DISK...)
+- [x] Complete Configs page (viewing information with good UI UX, auto detects values (thresholds, size...)
+- [x] Complete Settings page
 - [ ] Documentation
 - [ ] Dockerize the whole app
-- [ ] Settings part ? (change URI for Actuator backend, languages...)
 
 ## Project setup
 ```
