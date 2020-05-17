@@ -10,6 +10,9 @@ export const state = {
 export const mutations = {
   ADD_METRIC (state, { metricName, metricInfo }) {
     state.metrics.set(metricName, { name: metricName, infos: metricInfo })
+  },
+  DELETE_ALL_METRICS (state) {
+    state.metrics = new Map()
   }
 }
 
@@ -20,6 +23,7 @@ export const actions = {
         commit('ADD_METRIC', { metricName: metricName, metricInfo: response.data })
       })
       .catch(error => {
+        commit('DELETE_ALL_METRICS')
         console.log(error)
       })
   }

@@ -66,15 +66,15 @@ export default {
   methods: {
     pollData () {
       store.dispatch('metrics/fetchMetric', this.metric).then(response => {
-        this.filterMetricsWithCurrentMetric()
+        this.fillInfos()
       })
       this.polling = setInterval(() => {
         store.dispatch('metrics/fetchMetric', this.metric).then(response => {
-          this.filterMetricsWithCurrentMetric()
+          this.fillInfos()
         })
       }, this.refreshInterval * 1000)
     },
-    filterMetricsWithCurrentMetric () {
+    fillInfos () {
       this.infos = { name: this.getName(), value: this.getValue(), unit: this.getUnit() }
     },
     getMetric () {

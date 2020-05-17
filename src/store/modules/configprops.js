@@ -9,6 +9,9 @@ export const state = {
 export const mutations = {
   SET_CONFIGPROPS (state, configprops) {
     state.configprops = configprops
+  },
+  DELETE_ALL_CONFIGPROPS (state) {
+    state.configprops = []
   }
 }
 
@@ -19,6 +22,7 @@ export const actions = {
         commit('SET_CONFIGPROPS', response.data.contexts.application.beans)
       })
       .catch(error => {
+        commit('DELETE_ALL_CONFIGPROPS')
         console.log(error)
       })
   }

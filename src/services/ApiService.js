@@ -26,5 +26,8 @@ export default {
   },
   getMetricInfo (metric) {
     return apiClient.get('/metrics/' + metric)
+  },
+  getServerInfo () {
+    return apiClient.get('/health')
   }
 }
