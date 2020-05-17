@@ -1,6 +1,6 @@
 # spring-config-ui
 
-I created this project to learn about VueJS. You'll find some key concepts about this frameworks and I'll to manage all of this stuff in a "real app" way 😀 (#NoMoreHelloWorld => trying to do my best !)
+I created this project to learn about VueJS. You'll find some key concepts about this frameworks and I tried to manage all of this stuff in a "real app" way 😀 (#NoMoreHelloWorld => trying to do my best !)
 
 - [x] Init project with Vue CLI (ESLint, VueRouter, VueX, Vuetify...)
 - [x] Managing data with services and stores (mutations/action) from VueX
