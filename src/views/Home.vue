@@ -12,8 +12,7 @@
                 </v-toolbar>
                 <v-card-text>
                   <v-container>
-                    <span class="display-1">Welcome on your new configuration UI.</span>
-                    <pre class="mt-5" style="font-family: 'Roboto'">
+                    <span class="display-1">Welcome on your new configuration UI.</span><br/><br/>
 You'll discover an enhanced view for your metrics and statistics for your application running under Spring Boot and collecting
 metrics through Actuator. This project is under development, so please, you can send feedback to <v-chip
 class="ma-0"
@@ -24,20 +23,18 @@ href="mailto:cmoreau@ippon.fr"  target="_blank"
 ><v-avatar left size="16">
     <v-icon>mdi-account-circle</v-icon>
   </v-avatar>cmoreau@ippon.fr
-</v-chip>
-<v-spacer></v-spacer>
-Resources:
-- Spring : <a href="https://spring.io/">https://spring.io/</a>
-- Actuator : <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html">https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html</a>
-- VueJS : <a href="https://vuejs.org/">https://vuejs.org/</a>
-- This project repository (Github) : <a href="https://github.com/corentinmb/spring-config-ui">https://github.com/corentinmb/spring-config-ui</a>
-
-This project uses a bunch of dependencies:
-- axios: simple HTTP client
-- moment: library for parsing and formatting dates and times
-- vuetify: component library for material support
-- vuex: store implementation for VueJS
-</pre>
+</v-chip><br/><br/>
+Resources:<br/><br/>
+- Spring : <a href="https://spring.io/">https://spring.io/</a><br/>
+- Actuator : <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html">https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html</a><br/>
+- VueJS : <a href="https://vuejs.org/">https://vuejs.org/</a><br/>
+- This project repository (Github) : <a href="https://github.com/corentinmb/spring-config-ui">https://github.com/corentinmb/spring-config-ui</a><br/>
+<br/>
+This project uses a bunch of dependencies:<br/><br/>
+- axios: simple HTTP client<br/>
+- moment: library for parsing and formatting dates and times<br/>
+- vuetify: component library for material support<br/>
+- vuex: store implementation for VueJS<br/>
                   </v-container>
                 </v-card-text>
                 <v-card-actions>
