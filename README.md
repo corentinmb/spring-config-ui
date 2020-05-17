@@ -1,6 +1,6 @@
 # spring-config-ui
 
-I created this project to learn about VueJS. You'll find some key concepts about this frameworks and I'll to manage all of this stuff in a "real app" way :) (#NoMoreHelloWorld #AllInOneFileBashing)
+I created this project to learn about VueJS. You'll find some key concepts about this frameworks and I'll to manage all of this stuff in a "real app" way 😀 (#NoMoreHelloWorld => trying to do my best !)
 
 - [x] Init project with Vue CLI (ESLint, VueRouter, VueX, Vuetify...)
 - [x] Managing data with services and stores (mutations/action) from VueX
@@ -11,6 +11,11 @@ I created this project to learn about VueJS. You'll find some key concepts about
 - [x] Complete Settings page
 - [x] Documentation
 - [x] Dockerize the whole app
+
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" src="https://raw.githubusercontent.com/corentinmb/spring-config-ui/master/public/home.jpg">  Homepage |  <img width="1604" src="https://raw.githubusercontent.com/corentinmb/spring-config-ui/master/public/metrics.jpg"> Metrics |
+|<img width="1604" src="https://raw.githubusercontent.com/corentinmb/spring-config-ui/master/public/configprops.jpg"> Configprops |  <img width="1604" src="https://raw.githubusercontent.com/corentinmb/spring-config-ui/master/public/settings.jpg"> Settings |
 
 ## Project setup
 ```
