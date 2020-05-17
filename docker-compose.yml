@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  spring-boot-actuator:
+    image: corentinmb/spring-boot-actuator
+    container_name: spring-boot-actuator
+    ports:
+      - 8080:8080
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '3000:3000'
