@@ -4,12 +4,12 @@ export const namespaced = true
 
 export const state = {
   interval: 5000,
-  metrics: []
+  metrics: new Map()
 }
 
 export const mutations = {
   ADD_METRIC (state, { metricName, metricInfo }) {
-    state.metrics.push({ name: metricName, infos: metricInfo })
+    state.metrics.set(metricName, { name: metricName, infos: metricInfo })
   }
 }
 

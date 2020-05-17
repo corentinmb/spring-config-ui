@@ -8,7 +8,7 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group>
-          <router-link class="rl" to="/home">
+          <router-link class="rl" to="/">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-home</v-icon>
@@ -35,12 +35,12 @@
             </v-list-item>
           </router-link>
 
-          <router-link class="rl" to="/about">
+          <router-link class="rl" to="/settings">
             <v-list-item>
               <v-list-item-icon>
-                <v-icon>mdi-bullhorn</v-icon>
+                <v-icon>mdi-cog</v-icon>
               </v-list-item-icon>
-              <v-list-item-title>About</v-list-item-title>
+              <v-list-item-title>Settings</v-list-item-title>
             </v-list-item>
           </router-link>
         </v-list-item-group>
@@ -62,7 +62,11 @@
 export default {
   components: {
   },
-
+  mounted () {
+    this.$root.$on('activate-drawer', () => {
+      this.drawer = true
+    })
+  },
   data: () => ({
     drawer: false,
     name: 'Spring-Config-UI'
