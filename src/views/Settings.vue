@@ -14,9 +14,9 @@
                   <v-container>
                     <v-row>
                       <v-col cols="12" md="12" align="center" justify="center">
-                        <v-slider label="Refresh interval" v-model="slider" thumb-label="always" min="1" max="60" thumb-size="24"></v-slider>
-                        <v-text-field v-model="model" label="Server address"></v-text-field>
-                        <v-radio-group v-model="ex7" row>
+                        <v-slider label="Refresh interval (in seconds)" v-model="refreshInterval" thumb-label="always" min="1" max="60" thumb-size="24"></v-slider>
+                        <v-text-field v-model="baseUrl" label="Base URL (Actuator)"></v-text-field>
+                        <v-radio-group row v-model="language">
                           <v-radio label="English" value="English"></v-radio>
                           <v-radio label="French" value="French"></v-radio>
                         </v-radio-group>
@@ -34,17 +34,40 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 
 export default {
   data: function () {
     return {}
   },
   computed: {
-    ...mapGetters('metrics', ['metrics'])
+    refreshInterval: {
+      get () {
+        return this.$store.state.settings.refreshInterval
+      },
+      set (v) {
+        this.$store.commit('settings/SET_REFRESH_INTERVAL', v)
+      }
+    },
+    language: {
+      get () {
+        return this.$store.state.settings.language
+      },
+      set (v) {
+        this.$store.commit('settings/SET_LANGUAGE', v)
+      }
+    },
+    baseUrl: {
+      get () {
+        return this.$store.state.settings.baseUrl
+      },
+      set (v) {
+        this.$store.commit('settings/SET_BASEURL', v)
+      }
+    }
   },
   created () {
   },
-  methods: {}
+  methods: {
+  }
 }
 </script>

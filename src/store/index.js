@@ -3,13 +3,15 @@ import Vuex from 'vuex'
 
 import * as configprops from '@/store/modules/configprops.js'
 import * as metrics from '@/store/modules/metrics.js'
+import * as settings from '@/store/modules/settings.js'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   modules: {
     configprops,
-    metrics
+    metrics,
+    settings
   },
   state: {
   },
@@ -18,3 +20,5 @@ export default new Vuex.Store({
   actions: {
   }
 })
+
+export default store

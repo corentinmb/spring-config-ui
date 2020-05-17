@@ -1,7 +1,7 @@
 import axios from 'axios'
+import store from '@/store'
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8080/actuator',
   withCredentials: false, // This is the default
   headers: {
     Accept: 'application/json',
@@ -9,6 +9,13 @@ const apiClient = axios.create({
   },
   timeout: 10000
 })
+
+apiClient.interceptors.request.use(
+  config => {
+    console.log(store.state.settings.baseUrl)
+    config.baseURL = store.state.settings.baseUrl
+    return config
+  }, error => Promise.reject(error))
 
 export default {
   getConfigprops () {

@@ -39,7 +39,7 @@
 
 <script>
 import store from '@/store'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 import moment from 'moment'
 import History from '@/models/History.js'
 
@@ -57,7 +57,8 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('metrics', ['metrics'])
+    ...mapGetters('metrics', ['metrics']),
+    ...mapState('settings', ['refreshInterval'])
   },
   created () {
     this.pollData()
@@ -71,7 +72,7 @@ export default {
         store.dispatch('metrics/fetchMetric', this.metric).then(response => {
           this.filterMetricsWithCurrentMetric()
         })
-      }, 5000)
+      }, this.refreshInterval * 1000)
     },
     filterMetricsWithCurrentMetric () {
       this.infos = { name: this.getName(), value: this.getValue(), unit: this.getUnit() }
