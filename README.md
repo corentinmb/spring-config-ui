@@ -38,9 +38,12 @@ And access `localhost:8080/actuator`
 
 
 ### Compiles and minifies for production
+
+The whole stack (front and back has been dockerized): 
 ```
-npm run build
+docker-compose up -d
 ```
+It will brings up a full production ready (AOT VueJS build) stack that can be deployed everywhere.
 
 ### Lints and fixes files
 ```
