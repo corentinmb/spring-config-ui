@@ -1,4 +1,4 @@
-# spring-config-ui
+<img width="30%" src="https://i.imgur.com/QnoF20a.png"></img>
 
 I created this project to learn about VueJS. You'll find some key concepts about this frameworks and I tried to manage all of this stuff in a "real app" way 😀 (#NoMoreHelloWorld => trying to do my best !)
 
